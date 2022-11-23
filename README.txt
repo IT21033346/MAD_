@@ -283,3 +283,92 @@ public void checkboxx(){
 }
 \
 
+//fragmentations
+FragmentManager fragmentManage = getSupportFragmentManager();
+FragmentTransaction fragmentTransaction = fragmentManger.beginTransaction();
+fragmentTransaction.replace(R.id.framelayout,fragment);
+fragmenttransaction.commit();
+
+
+/alert dialog
+AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+alertDialog.setCancelable(true);
+alertDialog.setTitle("Type alert title here");
+alertDialog.setMessage("Type alert message here");
+alertDialog.show();
+
+// date picker
+final Calendar c = Calendar.getInstance();
+.
+int year = c.get(Calendar.YEAR);
+int month = c.get(Calendar.MONTH);
+int day = c.get(Calendar.DAY_OF_MONTH);
+
+DatePickerDialog datePickerDialog = new DatePickerDialog(
+	MainActivity.this,
+        new DatePickerDialog.OnDateSetListener() {
+                  @Override
+                  public void onDateSet(DatePicker view, int year,int monthOfYear, int dayOfMonth) {
+                              
+ 
+                     }
+                 },
+                 year, month, day
+);
+           
+datePickerDialog.show();
+
+--- end of datepicker ---
+
+---- timer picker ----
+//xml code
+<TimePicker
+   android:id="@+id/timePicker1"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content" />
+
+//java code
+import android.widget.TimePicker;
+private TimePicker timePicker1;
+timePicker1 = (TimePicker) findViewById(R.id.timePicker1);	
+
+int hour = timePicker1.getCurrentHour();
+int min = timePicker1.getCurrentMinute();
+
+---- end of timer picker ----
+
+
+----  Linear layout ------
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="vertical" />
+
+----- end of linear layout ----
+
+
+----  Constaint layout ------
+
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".type activty name here">
+
+----- end of Constaint layout ----
+
+
+----  Relative layout ------ 
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:paddingLeft="16dp"
+   android:paddingRight="16dp" 
+	
+/>
+
+----- end of Relative layout ----
