@@ -238,3 +238,48 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
           // with the returned requestCode
         startActivityForResult(Intent.createChooser(i, "Select Picture"), SELECT_PICTURE);
     }
+
+
+//a
+EditText pharmacyname=(EditText)findViewById(R.id.pharmacyname);
+pharmacyname.setenable
+
+//ii
+Bundle extras =Intemt .getExtras();
+if(extras!=null)
+String data =extras.getString(name);
+textview.setText(data)
+
+//b
+//i
+recyclerView
+
+//ii
+<String name ="paracetamol">paracetamol</String>
+<String name ="vitamin c">vitamin c</String>
+<String name ="amoxicillin">amoxicillin</String>
+
+<string-array name="drugs">
+    <drugs>@string/paracetamol</drugs>
+    <drugs>@string/vitamin</drugs>
+    <drugs>@string/amoxicillin</drugs>
+
+</string-array>
+
+//iii
+<EditText
+android:hint="@string/age"
+/>
+
+//c
+
+
+public void checkboxx(){
+    String name=EditTextname.getText().toString().trim();
+    String age=EditTextname.getText().toString().trim();
+
+    checkbox.setEnable(name.isChecked()&& !age.isChecked());
+
+}
+\
+
